@@ -29,13 +29,13 @@
       <li class="header text-uppercase"><span>Pelatihan</span></li>
 
       <li <?php if ($page == 'pegawai') {echo 'class="active"';} ?>>
-        <a>
+      <a href="<?php echo base_url('Pelatihan/HomePelatihan'); ?>">
           <i class="fa fa-leanpub"></i>
           <span>Data Pelatihan</span>
           <i class="fa fa-angle-left pull-right"></i>
         </a>
 
-        <ul class="treeview-menu">
+        <!-- <ul class="treeview-menu">
         <li <?php if ($page == 'pegawai') {echo 'class="active"';} ?>>
         <a href="<?php echo base_url('Pelatihan/homePelatihan'); ?>">
           <i class="fa fa-list-ul"></i>
@@ -49,8 +49,9 @@
           <span>Tambah Data Pelatihan</span>
         </a>
       </li>
-      
-        </ul>
+       -->
+
+        <!-- </ul> -->
     </li>
 
       <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
@@ -68,12 +69,6 @@
           </a>
         </li>
     
-          <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-            <a href="<?php echo base_url('Posisi'); ?>">
-              <i class="fa fa-plus-circle"></i>
-              <span>Tambah Data Kelas</span>
-            </a>
-          </li>
     
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
             <a href="<?php echo base_url('Posisi'); ?>">
@@ -81,14 +76,7 @@
               <span>Daftar Materi</span>
             </a>
           </li>
-
-          <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-            <a href="<?php echo base_url('Posisi'); ?>">
-              <i class="fa fa-plus-circle"></i>
-              <span>Tambah Materi</span>
-            </a>
-          </li>
-      
+    
       
         </ul>
 
