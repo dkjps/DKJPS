@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pegawai extends AUTH_Controller {
+class HomePelatihan extends AUTH_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('M_pegawai');
@@ -103,15 +103,15 @@ class Pegawai extends AUTH_Controller {
 
 	public function export() {
 		error_reporting(E_ALL);
-    
+
 		include_once './assets/phpexcel/Classes/PHPExcel.php';
 		$objPHPExcel = new PHPExcel();
 
 		$data = $this->M_pegawai->select_all_pegawai();
 
-		$objPHPExcel = new PHPExcel(); 
-		$objPHPExcel->setActiveSheetIndex(0); 
-		$rowCount = 1; 
+		$objPHPExcel = new PHPExcel();
+		$objPHPExcel->setActiveSheetIndex(0);
+		$rowCount = 1;
 
 		$objPHPExcel->getActiveSheet()->SetCellValue('A'.$rowCount, "ID");
 		$objPHPExcel->getActiveSheet()->SetCellValue('B'.$rowCount, "Nama");
@@ -123,18 +123,18 @@ class Pegawai extends AUTH_Controller {
 		$rowCount++;
 
 		foreach($data as $value){
-		    $objPHPExcel->getActiveSheet()->SetCellValue('A'.$rowCount, $value->id); 
-		    $objPHPExcel->getActiveSheet()->SetCellValue('B'.$rowCount, $value->nama); 
+		    $objPHPExcel->getActiveSheet()->SetCellValue('A'.$rowCount, $value->id);
+		    $objPHPExcel->getActiveSheet()->SetCellValue('B'.$rowCount, $value->nama);
 		    $objPHPExcel->getActiveSheet()->setCellValueExplicit('C'.$rowCount, $value->telp, PHPExcel_Cell_DataType::TYPE_STRING);
-		    $objPHPExcel->getActiveSheet()->SetCellValue('D'.$rowCount, $value->id_kota); 
-		    $objPHPExcel->getActiveSheet()->SetCellValue('E'.$rowCount, $value->id_kelamin); 
-		    $objPHPExcel->getActiveSheet()->SetCellValue('F'.$rowCount, $value->id_posisi); 
-		    $objPHPExcel->getActiveSheet()->SetCellValue('G'.$rowCount, $value->status); 
-		    $rowCount++; 
-		} 
+		    $objPHPExcel->getActiveSheet()->SetCellValue('D'.$rowCount, $value->id_kota);
+		    $objPHPExcel->getActiveSheet()->SetCellValue('E'.$rowCount, $value->id_kelamin);
+		    $objPHPExcel->getActiveSheet()->SetCellValue('F'.$rowCount, $value->id_posisi);
+		    $objPHPExcel->getActiveSheet()->SetCellValue('G'.$rowCount, $value->status);
+		    $rowCount++;
+		}
 
-		$objWriter = new PHPExcel_Writer_Excel2007($objPHPExcel); 
-		$objWriter->save('./assets/excel/Data Pegawai.xlsx'); 
+		$objWriter = new PHPExcel_Writer_Excel2007($objPHPExcel);
+		$objWriter->save('./assets/excel/Data Pegawai.xlsx');
 
 		$this->load->helper('download');
 		force_download('./assets/excel/Data Pegawai.xlsx', NULL);
@@ -148,15 +148,15 @@ class Pegawai extends AUTH_Controller {
 		} else {
 			$config['upload_path'] = './assets/excel/';
 			$config['allowed_types'] = 'xls|xlsx';
-			
+
 			$this->load->library('upload', $config);
-			
+
 			if ( ! $this->upload->do_upload('excel')){
 				$error = array('error' => $this->upload->display_errors());
 			}
 			else{
 				$data = $this->upload->data();
-				
+
 				error_reporting(E_ALL);
 				date_default_timezone_set('Asia/Jakarta');
 
