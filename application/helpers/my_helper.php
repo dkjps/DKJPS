@@ -67,17 +67,16 @@
 
 		if ($id != '') {
 			echo   '<div class="modal fade" id="' .$id .'" role="dialog">
-					  <div class="modal-dialog modal-md" role="document">
+					  <div class="modal-dialog modal-md" role="document" style="margin-top:40vh;">
 					    <div class="modal-content">
 					        <div class="col-md-offset-1 col-md-10 col-md-offset-1 well">
 						      <h3 style="display:block; text-align:center;">' .$title .'</h3>
-						      
-						      <div class="col-md-6">
-						        <button class="form-control btn btn-primary ' .$class .'"> <i class="glyphicon glyphicon-ok-sign"></i> ' .$yes .'</button>
-						      </div>
-						      <div class="col-md-6">
-						        <button class="form-control btn btn-danger" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> ' .$no .'</button>
-						      </div>
+									<div class="row">
+										<div class="col-md-12" style="">
+							        <button class="form-control btn btn-primary ' .$class .'" style="width:40%; margin-left:10%;"> <i class="glyphicon glyphicon-ok-sign"></i> Ya</button>
+							        <button class="form-control btn btn-danger" style="width:40%;" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> ' .$no .'</button>
+							      </div>
+									</div>
 						    </div>
 					    </div>
 					  </div>
