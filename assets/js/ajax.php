@@ -10,6 +10,8 @@
 
 	window.onload = function() {
 		tampilPegawai();
+		tampilDaftarKelas();
+		tampilDaftarPelatihan();
 		tampilPosisi();
 		tampilKota();
 		<?php
@@ -39,6 +41,22 @@
 		$.get('<?php echo base_url('Pegawai/tampil'); ?>', function(data) {
 			MyTable.fnDestroy();
 			$('#data-pegawai').html(data);
+			refresh();
+		});
+	}
+
+	function tampilDaftarPelatihan() {
+		$.get('<?php echo base_url('Pelatihan/tampil'); ?>', function(data) {
+			MyTable.fnDestroy();
+			$('#daftar-pelatihan').html(data);
+			refresh();
+		});
+	}
+
+	function tampilDaftarKelas() {
+		$.get('<?php echo base_url('Pelatihan/tampilDaftarKelas'); ?>', function(data) {
+			MyTable.fnDestroy();
+			$('#daftar-kelas').html(data);
 			refresh();
 		});
 	}

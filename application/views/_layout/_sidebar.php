@@ -29,7 +29,7 @@
       <li class="header text-uppercase"><span>Pelatihan</span></li>
 
       <li <?php if ($page == 'pegawai') {echo 'class="active"';} ?>>
-      <a href="<?php echo base_url('Pelatihan/HomePelatihan'); ?>">
+      <a href="<?php echo base_url('Pelatihan'); ?>">
           <i class="fa fa-leanpub"></i>
           <span>Data Pelatihan</span>
           <i class="fa fa-angle-left pull-right"></i>
@@ -37,7 +37,7 @@
 
         <!-- <ul class="treeview-menu">
         <li <?php if ($page == 'pegawai') {echo 'class="active"';} ?>>
-        <a href="<?php echo base_url('Pelatihan/homePelatihan'); ?>">
+        <a href="<?php echo base_url('Pelatihan'); ?>">
           <i class="fa fa-list-ul"></i>
           <span>Daftar Data Pelatihan</span>
         </a>

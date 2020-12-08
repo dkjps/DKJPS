@@ -46,7 +46,7 @@
 	}
 
 	// MODAL
-	function show_my_modal($content='', $id='', $data='', $size='sm') {
+	function show_my_modal($content='', $id='', $data='', $size='md') {
 		$_ci = &get_instance();
 		if ($content != '') {
 			$view_content = $_ci->load->view($content, $data, TRUE);
@@ -67,7 +67,6 @@
 					  <div class="modal-dialog modal-md" role="document" style="margin-top:40vh;">
 					    <div class="modal-content">
 					        <div class="col-md-offset-1 col-md-10 col-md-offset-1 well">
-<<<<<<< Updated upstream
 						      <h3 style="display:block; text-align:center;">' .$title .'</h3>
 									<div class="row">
 										<div class="col-md-12" style="">
@@ -75,17 +74,6 @@
 							        <button class="form-control btn btn-danger" style="width:40%;" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> ' .$no .'</button>
 							      </div>
 									</div>
-=======
-						      <h3 style="display:block; text-align:center;">' .$title .'</h3>					
-						      <div class="col-md-6">
-						        <button class="form-control btn btn-primary ' .$class .'"> <i class="glyphicon glyphicon-ok-sign"></i> ' .$yes .'</button>
-						      </div>
-						      <div class="col-md-6">
-						        <button class="form-control btn btn-danger" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> ' .$no .'</button>
-							  </div>
-							  
-
->>>>>>> Stashed changes
 						    </div>
 					    </div>
 					  </div>
