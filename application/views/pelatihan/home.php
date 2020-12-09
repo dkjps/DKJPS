@@ -28,11 +28,9 @@
   <table id="list-data" class="table table-bordered table-striped">
       <thead>
         <tr>
+          <th>#</th>
           <th>Nama Pelatihan</th>
           <th>Deskripsi Pelatihan</th>
-          <th>Jumlah Kelas</th>
-          <th>Jumlah Pemateri</th>
-          <th>Status</th>
           <th style="text-align: center;">Aksi</th>
         </tr>
       </thead>

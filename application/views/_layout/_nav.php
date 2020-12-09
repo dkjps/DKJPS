@@ -17,22 +17,22 @@
         </a>
         <ul class="dropdown-menu">
           <!-- The user image in the menu -->
-          <li class="user-header">
+          <!-- <li class="user-header">
             <img src="<?php echo base_url(); ?>assets/img/profil1.jpg" class="img-circle" alt="User Image">
 
             <p>
               Khafido - Web Developer
               <small>Member since Sep. 2016</small>
             </p>
-          </li>
+          </li> -->
           <!-- Menu Footer-->
           <li class="user-footer">
-            <div class="pull-left">
+            <!-- <div class="pull-left"> -->
               <a href="<?php echo base_url('Profile'); ?>" class="btn btn-default btn-flat">Profile</a>
-            </div>
-            <div class="pull-right">
+            <!-- </div> -->
+            <!-- <div class="pull-right"> -->
               <a href="<?php echo base_url('Auth/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
-            </div>
+            <!-- </div> -->
           </li>
         </ul>
       </li>
