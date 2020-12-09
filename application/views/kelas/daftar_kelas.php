@@ -1,37 +1,26 @@
-<div class="msg" style="display:none;">
-  <?php echo @$this->session->flashdata('msg'); ?>
-</div>
-
-<div class="box">
-  <div class="box-body">
-  <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputNamaPelatihan">Nama Kelas Pelatihan</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Nama Pelatihan">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputTanggalPelatihan">Tanggal Mulai</label>
-
-      <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-    </div>
-  </div>
-
-
-  <div class="form-group col-md-12">
-    <label for="inputAddress">Deskripsi Pelatihan</label>
-    <textarea class="form-control" cols="40" id="textarea" name="textarea" rows="10" style="resize:none" placeholder="Pelatihan ini tentang . . ."></textarea>
-  </div>
-
-  <div class="form-group col-md-12">
-  <button type="submit" class="btn btn-primary">Tambah Pelatihan</button>
-  </div>
-
-</form>
-  </div>
-</div>
-
 <?php
-  $data['judul'] = 'TambahPelatihan';
-  $data['url'] = 'Pelatihan/addPelatihan';
+  $warna = array('danger', 'warning', 'primary', 'success');
+
+  foreach ($dataPegawai as $pegawai) {
+    $statusPelatihan = rand(0,3);
+    ?>
+    <tr>
+      <td style="min-width:230px;"><?php echo $pegawai->pegawai; ?></td>
+      <td><?php echo $pegawai->telp; ?></td>
+      <td><?php echo $pegawai->kota; ?></td>
+      <td><?php echo $pegawai->kelamin; ?></td>
+      <td class="text-center">
+        <span class="btn btn-<?=$warna[$statusPelatihan]?>">
+        <?php echo $pegawai->posisi; ?>
+        </span>
+      </td>
+      <td class="text-center" style="min-width:230px;">
+        <button class="btn btn-success update-dataPegawai" data-id="<?php echo $pegawai->id; ?>"><i class="glyphicon glyphicon-eye-open"></i></button>
+        <button class="btn btn-warning update-dataPegawai" data-id="<?php echo $pegawai->id; ?>"><i class="glyphicon glyphicon-share-alt"></i></button>
+        <button class="btn btn-primary update-dataPegawai" data-id="<?php echo $pegawai->id; ?>"><i class="glyphicon glyphicon-edit"></i></button>
+        <button class="btn btn-danger konfirmasiHapus-pegawai" data-id="<?php echo $pegawai->id; ?>" data-toggle="modal" data-target="#konfirmasiHapus"><i class="glyphicon glyphicon-trash"></i></button>
+      </td>
+    </tr>
+    <?php
+  }
 ?>

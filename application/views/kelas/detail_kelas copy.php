@@ -64,15 +64,13 @@
 
         <div class="tab-content">
             <div class="tab-pane active" id="tab_materi">
-          
               <div class="col col-md-12" style="margin-top:10px; margin-bottom:5px;">
-                <a href="<?php echo base_url('Topik/tambahTopik'); ?>" class="btn btn-primary" style="margin-top:10px; margin-bottom:5px;"><i class="glyphicon glyphicon-plus-sign"></i>  Tambah Topik</a>
+              <a href<?php echo base_url('Topik/tambahTopik'); ?>" class="btn btn-primary" style="margin-top:10px; margin-bottom:5px;"><i class="glyphicon glyphicon-plus-sign"></i>  Tambah Topik</a>
               </div>
               
-              <div class="col col-md-12">
               <!-- tabelTopik -->
               <div class="table-responsive">
-                <table id="list-topik" class="table table-bordered table-striped">
+                <table id="list-data" class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>Topik Pelatihan</th>
@@ -84,21 +82,18 @@
                   <tbody id="daftar-topik">        
                   </tbody>
                 </table>
-              </div>
-              
+          
               </div>
               
             </div>
-            
             <div class="tab-pane" id="tab_pemateri">
               <!-- tablePemateri -->
               <div class="col col-md-12">
               <a href="" class="btn btn-primary" style="margin-top:10px; margin-bottom:5px;"><i class="glyphicon glyphicon-plus-sign"></i>  Tambah Pemateri</a>
               </div>
 
-              <div class="col col-md-12">
               <div class="table-responsive">
-                <table id="list-pemateri" class="table table-bordered table-striped">
+                <table id="list-data" class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>ID Pemateri</th>
@@ -112,8 +107,6 @@
                   <tbody id="daftar-pemateri">        
                   </tbody>
                 </table>
-              </div>
-              
               </div>
               
           

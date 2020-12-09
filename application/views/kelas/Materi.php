@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pelatihan extends AUTH_Controller {
+class Materi extends AUTH_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('M_pegawai');
@@ -24,21 +24,6 @@ class Pelatihan extends AUTH_Controller {
 		$this->template->views('pelatihan/home', $data);
 	}
 
-	public function detailPelatihan() {
-		$data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
-
-		$data['page'] = "Detail Pelatihan";
-		$data['judul'] = "Detail Pelatihan XXX";
-		$data['deskripsi'] = "Detail pelatihan xxx";
-
-		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
-
-		$this->template->views('pelatihan/detail_pelatihan', $data);
-	}
-
 	public function tambahPelatihan(){
         $data['userdata'] = $this->userdata;
 		$data['dataPegawai'] = $this->M_pegawai->select_all();
@@ -53,29 +38,10 @@ class Pelatihan extends AUTH_Controller {
 		$this->template->views('pelatihan/pelatihan_add');
 	}
 
-	public function tambahKelas(){
-        $data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
-
-		$data['page'] = "tambahPelatihan";
-		$data['judul'] = "Tambah Data Pelatihan";
-		$data['deskripsi'] = "Tambah data pelatihan TerasAsuh sesuai kebutuhan";
-
-		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
-		$this->template->views('kelas/kelas_add');
-	}
-
-	public function tampil() {
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$this->load->view('pelatihan/daftar_pelatihan', $data);
-	}
-
-	public function tampilDaftarKelas() {
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$this->load->view('pelatihan/daftar_kelas', $data);
-	}
+	// public function tampil() {
+	// 	$data['dataPegawai'] = $this->M_pegawai->select_all();
+	// 	// $this->load->view('pelatihan/data_tabel', $data);
+	// }
 
 	public function prosesTambah() {
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
