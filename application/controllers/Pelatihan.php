@@ -7,6 +7,7 @@ class Pelatihan extends AUTH_Controller {
 		$this->load->model('M_pegawai');
 		$this->load->model('M_posisi');
 		$this->load->model('M_kota');
+		$this->load->model('GeneralApiModel');
 	}
 
 	public function index() {
@@ -63,7 +64,7 @@ class Pelatihan extends AUTH_Controller {
 	}
 
 	public function tampil() {
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
+		$data['pelatihan'] = $this->GeneralApiModel->select_all();
 		$this->load->view('pelatihan/daftar_pelatihan', $data);
 	}
 
