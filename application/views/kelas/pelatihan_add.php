@@ -13,7 +13,7 @@
     <div class="form-group col-md-6">
       <label for="inputTanggalPelatihan">Tanggal Mulai</label>
 
-      <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="date"/>
+      <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
     </div>
   </div>
 

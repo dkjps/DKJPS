@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript">
 
     </script>
+
   </head>
 
   <body class="hold-transition skin-blue sidebar-mini">

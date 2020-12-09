@@ -1,8 +1,11 @@
 <footer class="main-footer">
 	<!-- To the right -->
 	<div class="pull-right hidden-xs">
-		Dashboard Admin
+		<a href="<?php echo base_url('Daftar'); ?>">
+		TerasAsuh Panitia
+		</a>
+		
 	</div>
 	<!-- Default to the left -->
-	<strong>Copyright &copy; 2016 <a href="#">Achmad Chadil Auwfar</a>.</strong> All rights reserved.
+	<strong>Copyright &copy; 2020 <a href="#">UB Learning Technology</a>.</strong> All rights reserved.
 </footer>

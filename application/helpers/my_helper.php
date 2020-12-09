@@ -48,12 +48,10 @@
 	// MODAL
 	function show_my_modal($content='', $id='', $data='', $size='md') {
 		$_ci = &get_instance();
-
 		if ($content != '') {
 			$view_content = $_ci->load->view($content, $data, TRUE);
-
 			return '<div class="modal fade" id="' .$id .'" role="dialog">
-					  <div class="modal-dialog modal-' .$size .'" role="document">
+			  <div class="modal-dialog modal-' .$size .'" role="document">
 					    <div class="modal-content">
 					        ' .$view_content .'
 					    </div>
@@ -64,7 +62,6 @@
 
 	function show_my_confirm($id='', $class='', $title='Konfirmasi', $yes = 'Ya', $no = 'Tidak') {
 		$_ci = &get_instance();
-
 		if ($id != '') {
 			echo   '<div class="modal fade" id="' .$id .'" role="dialog">
 					  <div class="modal-dialog modal-md" role="document" style="margin-top:40vh;">
