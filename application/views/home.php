@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <div class="col-lg-6 col-xs-12">
+  <!-- <div class="col-lg-6 col-xs-12">
     <div class="box box-info">
       <div class="box-header with-border">
         <i class="fa fa-briefcase"></i>
@@ -74,9 +74,9 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-<script src="<?php echo base_url(); ?>assets/plugins/chartjs/Chart.min.js"></script>
+<!-- <script src="<?php echo base_url(); ?>assets/plugins/chartjs/Chart.min.js"></script>
 <script>
   //data posisi
   var pieChartCanvas = $("#data-posisi").get(0).getContext("2d");
@@ -119,4 +119,4 @@
   };
 
   pieChart.Doughnut(PieData, pieOptions);
-</script>
+</script> -->
