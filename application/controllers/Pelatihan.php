@@ -7,49 +7,36 @@ class Pelatihan extends AUTH_Controller {
 		$this->load->model('M_pegawai');
 		$this->load->model('M_posisi');
 		$this->load->model('M_kota');
+		$this->load->model('GeneralApiModel');
 	}
 
 	public function index() {
 		$data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "Pelatihan";
 		$data['judul'] = "Daftar Pelatihan";
 		$data['deskripsi'] = "Daftar pelatihan TerasAsuh";
 
-		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
-
 		$this->template->views('pelatihan/home', $data);
 	}
 
-	public function detailPelatihan() {
-		$data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
-
+	public function detailPelatihan($id) {
 		$data['page'] = "Detail Pelatihan";
-		$data['judul'] = "Detail Pelatihan XXX";
-		$data['deskripsi'] = "Detail pelatihan xxx";
+		$pelatihan = $this->GeneralApiModel->getWhereMaster(array('id'=>$id),'masterdata_pelatihan')->row();
+		$data['judul'] = "Detail $pelatihan->nama";
+		$data['deskripsi'] = "Detail pelatihan $pelatihan->deskripsi";
 
-		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
-
+		$data['detail'] = $this->GeneralApiModel->getWhereTransactional(array('id_pelatihan'=>$id),'kelas_pelatihan')->result();
 		$this->template->views('pelatihan/detail_pelatihan', $data);
 	}
 
 	public function tambahPelatihan(){
-        $data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
-
 		$data['page'] = "tambahPelatihan";
+		$pelatihan = $this->GeneralApiModel->getWhereMaster(array('id_pelatihan'=>$id),'kelas_pelatihan')->row();
+		$data['pelatihan'] = '';
 		$data['judul'] = "Tambah Data Pelatihan";
 		$data['deskripsi'] = "Tambah data pelatihan TerasAsuh sesuai kebutuhan";
 
-		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
 		$this->template->views('pelatihan/pelatihan_add');
 	}
 
@@ -68,7 +55,7 @@ class Pelatihan extends AUTH_Controller {
 	}
 
 	public function tampil() {
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
+		$data['pelatihan'] = $this->GeneralApiModel->getAllMaster('masterdata_pelatihan')->result();
 		$this->load->view('pelatihan/daftar_pelatihan', $data);
 	}
 

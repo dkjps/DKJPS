@@ -10,9 +10,9 @@
         <a href="<?php echo base_url('Pelatihan/tambahKelas'); ?>" class="btn btn-primary btn-block btn-flat" role="button" aria-pressed="true"><span>Tambah Kelas</span></a>
     </div>
     </div>
-  
+
   </div>
-    
+
     <!-- <div class="col-md-3">
         <a href="<?php echo base_url('Pegawai/export'); ?>" class="form-control btn btn-default"><i class="glyphicon glyphicon glyphicon-floppy-save"></i> Export Data Excel</a>
     </div>
@@ -28,22 +28,23 @@
   <table id="list-data" class="table table-bordered table-striped">
       <thead>
         <tr>
+          <th>#</th>
           <th>Nama Kelas</th>
           <th>Jumlah Peserta</th>
           <th>Jumlah Pemateri</th>
-          <th>Periode Kelas</th>
+          <th>Tgl Buka</th>
+          <th>Tgl Selesai</th>
           <th>Status</th>
           <th style="text-align: center;">Aksi</th>
         </tr>
       </thead>
-      <tbody id="daftar-kelas">        
+      <tbody id="daftar-kelas">
+        <?php $this->load->view('pelatihan/daftar_kelas'); ?>
       </tbody>
     </table>
   </div>
   </div>
 </div>
-
-<?php echo $modal_tambah_pegawai; ?>
 
 <div id="tempat-modal"></div>
 

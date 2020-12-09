@@ -67,7 +67,7 @@
 	})
 	$(document).on("click", ".hapus-dataPegawai", function() {
 		var id = id_pegawai;
-		
+
 		$.ajax({
 			method: "POST",
 			url: "<?php echo base_url('Pegawai/delete'); ?>",
@@ -83,7 +83,7 @@
 
 	$(document).on("click", ".update-dataPegawai", function() {
 		var id = $(this).attr("data-id");
-		
+
 		$.ajax({
 			method: "POST",
 			url: "<?php echo base_url('Pegawai/update'); ?>",
@@ -117,7 +117,7 @@
 				effect_msg();
 			}
 		})
-		
+
 		e.preventDefault();
 	});
 
@@ -143,7 +143,7 @@
 				effect_msg();
 			}
 		})
-		
+
 		e.preventDefault();
 	});
 
@@ -170,7 +170,7 @@
 	})
 	$(document).on("click", ".hapus-dataKota", function() {
 		var id = id_kota;
-		
+
 		$.ajax({
 			method: "POST",
 			url: "<?php echo base_url('Kota/delete'); ?>",
@@ -186,7 +186,7 @@
 
 	$(document).on("click", ".update-dataKota", function() {
 		var id = $(this).attr("data-id");
-		
+
 		$.ajax({
 			method: "POST",
 			url: "<?php echo base_url('Kota/update'); ?>",
@@ -200,7 +200,7 @@
 
 	$(document).on("click", ".detail-dataKota", function() {
 		var id = $(this).attr("data-id");
-		
+
 		$.ajax({
 			method: "POST",
 			url: "<?php echo base_url('Kota/detail'); ?>",
@@ -242,7 +242,7 @@
 				effect_msg();
 			}
 		})
-		
+
 		e.preventDefault();
 	});
 
@@ -268,7 +268,7 @@
 				effect_msg();
 			}
 		})
-		
+
 		e.preventDefault();
 	});
 
@@ -295,7 +295,7 @@
 	})
 	$(document).on("click", ".hapus-dataPosisi", function() {
 		var id = id_posisi;
-		
+
 		$.ajax({
 			method: "POST",
 			url: "<?php echo base_url('Posisi/delete'); ?>",
@@ -311,7 +311,7 @@
 
 	$(document).on("click", ".update-dataPosisi", function() {
 		var id = $(this).attr("data-id");
-		
+
 		$.ajax({
 			method: "POST",
 			url: "<?php echo base_url('Posisi/update'); ?>",
@@ -325,7 +325,7 @@
 
 	$(document).on("click", ".detail-dataPosisi", function() {
 		var id = $(this).attr("data-id");
-		
+
 		$.ajax({
 			method: "POST",
 			url: "<?php echo base_url('Posisi/detail'); ?>",
@@ -367,7 +367,7 @@
 				effect_msg();
 			}
 		})
-		
+
 		e.preventDefault();
 	});
 
@@ -393,7 +393,7 @@
 				effect_msg();
 			}
 		})
-		
+
 		e.preventDefault();
 	});
 
