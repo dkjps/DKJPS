@@ -3,27 +3,130 @@
 </div>
 
 <div class="box">
-  
-</div>
+  <div class="box-body">
+  <form>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputNamaPelatihan">Nama Pelatihan</label>
+      <input type="text" class="form-control" readonly="readonly" id="inputEmail4" placeholder="Nama Pelatihan">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputTanggalPelatihan">Nama Kelas</label>
+      <input class="form-control" id="namaKelas" readonly="readonly" name="namaKelas" placeholder="Nama Kelas" type="text"/>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputTanggalPelatihan">Status Kelas</label>
+      <a class="form-control btn btn-flat btn-success">berjalan</a>
+    </div>
+  </div>
+
+  <div class="form-row">
+  <div class="form-group col-md-2">
+      <label for="inputNamaPelatihan">Jumlah Topik</label>
+      <input type="text" class="form-control" readonly="readonly" id="inputEmail4" placeholder="Jumlah Materi">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputTanggalPelatihan">Jumlah Pemateri</label>
+      <input class="form-control" id="namaKelas" readonly="readonly" name="namaKelas" placeholder="Jumlah Materi" type="text"/>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="inputTanggalPelatihan">Periode Kelas</label>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+        <input class="form-control" id="date" readonly="readonly" name="date" placeholder="MM/DD/YYY" type="date"/>
+        </div>
+        <div class="form-group col-md-6">
+      <input class="form-control" id="date" readonly="readonly" name="date" placeholder="MM/DD/YYY" type="date"/>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  </form>
+  </div>
+
 
   <!-- /.box-header -->
   <div class="box-body">
-  <div class="table-responsive">
-  <table id="list-data" class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Nama Pelatihan</th>
-          <th>Deskripsi Pelatihan</th>
-          <th>Jumlah Kelas</th>
-          <th>Jumlah Pemateri</th>
-          <th>Status</th>
-          <th style="text-align: center;">Aksi</th>
-        </tr>
-      </thead>
-      <tbody id="data-pegawai">        
-      </tbody>
-    </table>
-  </div>
+    <div class="tabbable-panel">
+      <div class="tabbable-line">
+        <ul class="nav nav-tabs">
+          <li class="active">
+                <a href="#tab_materi" data-toggle="tab">
+                Daftar Topik </a>
+              </li>
+              <li>
+                <a href="#tab_pemateri" data-toggle="tab">
+                Daftar Pemateri </a>
+              </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab_materi">
+          
+              <div class="col col-md-12" style="margin-top:10px; margin-bottom:5px;">
+                <a href="<?php echo base_url('Topik/tambahTopik'); ?>" class="btn btn-primary pull-right" style="margin-top:10px; margin-bottom:5px;"><i class="glyphicon glyphicon-plus-sign"></i>  Tambah Topik</a>
+              </div>
+              
+              <div class="col col-md-12">
+              <!-- tabelTopik -->
+              <div class="table-responsive">
+                <table id="list-topik" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Topik Pelatihan</th>
+                      <th>Nama Pemateri</th>
+                      <th>Tanggal</th>
+                      <th style="text-align: center;">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="daftar-topik">        
+                  </tbody>
+                </table>
+              </div>
+              
+              </div>
+              
+            </div>
+            
+            <div class="tab-pane" id="tab_pemateri">
+              <!-- tablePemateri -->
+              <div class="col col-md-12">
+              <a href="<?php echo base_url('Pemateri/tambahPemateri'); ?>" class="btn btn-primary pull-right" style="margin-top:10px; margin-bottom:5px;"><i class="glyphicon glyphicon-plus-sign"></i>  Tambah Pemateri</a>
+              </div>
+
+              <div class="col col-md-12">
+              <div class="table-responsive">
+                <table id="list-pemateri" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>ID Pemateri</th>
+                      <th>Nama Pemateri</th>
+                      <th>Provinsi</th>
+                      <th>Total Topik</th>
+                      <th>Topik Diampu</th>
+                      <th style="text-align: center;">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="daftar-pemateri">        
+                  </tbody>
+                </table>
+              </div>
+              
+              </div>
+              
+          
+						</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
   </div>
 </div>
 

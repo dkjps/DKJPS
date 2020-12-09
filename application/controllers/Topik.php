@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kelas extends AUTH_Controller {
+class Topik extends AUTH_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('M_pegawai');
@@ -16,30 +16,15 @@ class Kelas extends AUTH_Controller {
 		$data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "Pelatihan";
-		$data['judul'] = "Detail Kelas";
+		$data['judul'] = "Daftar Pelatihan";
 		$data['deskripsi'] = "Daftar pelatihan TerasAsuh";
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
 
-		$this->template->views('kelas/daftar_kelas', $data);
+		$this->template->views('pelatihan/home', $data);
 	}
 
-	public function detailKelas() {
-		$data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
-
-		$data['page'] = "Pelatihan";
-		$data['judul'] = "Detail Kelas";
-		$data['deskripsi'] = "Daftar pelatihan TerasAsuh";
-
-		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
-
-		$this->template->views('kelas/detail_kelas', $data);
-	}
-
-	public function tambahPelatihan(){
+	public function tambahTopik(){
         $data['userdata'] = $this->userdata;
 		$data['dataPegawai'] = $this->M_pegawai->select_all();
 		$data['dataPosisi'] = $this->M_posisi->select_all();
@@ -50,12 +35,13 @@ class Kelas extends AUTH_Controller {
 		$data['deskripsi'] = "Tambah data pelatihan TerasAsuh sesuai kebutuhan";
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
-		$this->template->views('pelatihan/pelatihan_add');
+		$this->template->views('topik/topik_add');
 	}
 
+	
 	public function tampil() {
 		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$this->load->view('pelatihan/data_tabel', $data);
+		$this->load->view('pelatihan/daftar_pelatihan', $data);
 	}
 
 	public function prosesTambah() {

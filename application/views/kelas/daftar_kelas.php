@@ -3,35 +3,55 @@
 </div>
 
 <div class="box">
+  <div class="box-header">
+  <div class="container">
+  <div class="row">
+    <div class="col align-self-end">
+        <a href="<?php echo base_url('Pelatihan/tambahKelas'); ?>" class="btn btn-primary btn-block btn-flat" role="button" aria-pressed="true"><span>Tambah Kelas</span></a>
+    </div>
+    </div>
+
+  </div>
+
+    <!-- <div class="col-md-3">
+        <a href="<?php echo base_url('Pegawai/export'); ?>" class="form-control btn btn-default"><i class="glyphicon glyphicon glyphicon-floppy-save"></i> Export Data Excel</a>
+    </div>
+    <div class="col-md-3">
+        <button class="form-control btn btn-default" data-toggle="modal" data-target="#import-pegawai"><i class="glyphicon glyphicon glyphicon-floppy-open"></i> Import Data Excel</button>
+    </div> -->
+  </div>
+
+
+  <!-- /.box-header -->
   <div class="box-body">
-  <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputNamaPelatihan">Nama Kelas Pelatihan</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Nama Pelatihan">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputTanggalPelatihan">Tanggal Mulai</label>
-
-      <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-    </div>
+  <div class="table-responsive">
+  <table id="list-data" class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nama Kelas</th>
+          <th>Nama Pelatihan</th>
+          <th>Jumlah Peserta</th>
+          <th>Jumlah Pemateri</th>
+          <th>Tgl Buka</th>
+          <th>Tgl Selesai</th>
+          <th>Status</th>
+          <th style="text-align: center;">Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="daftar-kelas">
+        <?php $this->load->view('kelas/data_kelas'); ?>
+      </tbody>
+    </table>
   </div>
-
-
-  <div class="form-group col-md-12">
-    <label for="inputAddress">Deskripsi Pelatihan</label>
-    <textarea class="form-control" cols="40" id="textarea" name="textarea" rows="10" style="resize:none" placeholder="Pelatihan ini tentang . . ."></textarea>
-  </div>
-
-  <div class="form-group col-md-12">
-  <button type="submit" class="btn btn-primary">Tambah Pelatihan</button>
-  </div>
-
-</form>
   </div>
 </div>
 
+<div id="tempat-modal"></div>
+
+<?php show_my_confirm('konfirmasiHapus', 'hapus-dataPegawai', 'Hapus Data Ini?', 'Ya, Hapus Data Ini'); ?>
 <?php
-  $data['judul'] = 'TambahPelatihan';
-  $data['url'] = 'Pelatihan/addPelatihan';
+  $data['judul'] = 'Pelatihan';
+  $data['url'] = 'Pelatihan/homePelatihan';
+  echo show_my_modal('modals/modal_import', 'import-pegawai', $data);
 ?>

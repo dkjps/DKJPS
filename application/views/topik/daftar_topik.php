@@ -33,5 +33,5 @@
 
 <?php
   $data['judul'] = 'TambahPelatihan';
-  $data['url'] = 'tambahData/addPelatihan';
+  $data['url'] = 'Pelatihan/addPelatihan';
 ?>

@@ -21,10 +21,10 @@ class Materi extends AUTH_Controller {
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
 
-		$this->template->views('pelatihan/home', $data);
+		$this->template->views('materi/home_materi', $data);
 	}
 
-	public function tambahPelatihan(){
+	public function tambahMateri(){
         $data['userdata'] = $this->userdata;
 		$data['dataPegawai'] = $this->M_pegawai->select_all();
 		$data['dataPosisi'] = $this->M_posisi->select_all();
@@ -35,13 +35,13 @@ class Materi extends AUTH_Controller {
 		$data['deskripsi'] = "Tambah data pelatihan TerasAsuh sesuai kebutuhan";
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
-		$this->template->views('pelatihan/pelatihan_add');
+		$this->template->views('materi/materi_add');
 	}
 
-	// public function tampil() {
-	// 	$data['dataPegawai'] = $this->M_pegawai->select_all();
-	// 	// $this->load->view('pelatihan/data_tabel', $data);
-	// }
+	public function tampil() {
+		$data['dataPegawai'] = $this->M_pegawai->select_all();
+		$this->load->view('pelatihan/data_tabel', $data);
+	}
 
 	public function prosesTambah() {
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required');

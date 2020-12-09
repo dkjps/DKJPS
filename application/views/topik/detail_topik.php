@@ -5,7 +5,7 @@
 <div class="box">
   <div class="box-header">
     <div class="col-md-6" style="padding: 0;">
-        <a href="<?php echo base_url('tambahData/addPelatihan'); ?>" class="btn btn-primary btn-block btn-flat" role="button" aria-pressed="true"><span>Tambah Pelatihan</span></a>
+        <a href="<?php echo base_url('Pelatihan/AddPelatihan'); ?>" class="btn btn-primary btn-block btn-flat" role="button" aria-pressed="true"><span>Tambah Pelatihan</span></a>
     </div>
     <div class="col-md-3">
         <a href="<?php echo base_url('Pegawai/export'); ?>" class="form-control btn btn-default"><i class="glyphicon glyphicon glyphicon-floppy-save"></i> Export Data Excel</a>
@@ -20,7 +20,7 @@
   <table id="list-data" class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th>Nama Pelatihan</th>
+          <th>Nama Materi</th>
           <th>Deskripsi Pelatihan</th>
           <th>Jumlah Kelas</th>
           <th>Jumlah Pemateri</th>
@@ -42,6 +42,6 @@
 <?php show_my_confirm('konfirmasiHapus', 'hapus-dataPegawai', 'Hapus Data Ini?', 'Ya, Hapus Data Ini'); ?>
 <?php
   $data['judul'] = 'Pegawai';
-  $data['url'] = 'Pegawai/import';
+  $data['url'] = 'Pelatihan/homePelatihan';
   echo show_my_modal('modals/modal_import', 'import-pegawai', $data);
 ?>

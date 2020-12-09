@@ -39,7 +39,7 @@
       <li class="<?=(strtolower($page)=='kelas'?'active':'') ?>">
         <a>
           <i class="fa fa-bell"></i>
-          <span>Data Kelas</span>
+          <span>Kelas & Topik</span>
           <i class="fa fa-angle-left pull-right"></i>
         </a>
 
@@ -54,6 +54,13 @@
 
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
             <a href="<?php echo base_url('Posisi'); ?>">
+              <i class="fa fa-list-ul"></i>
+              <span>Daftar Topik</span>
+            </a>
+          </li>
+
+          <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
+            <a href="<?php echo base_url('Materi'); ?>">
               <i class="fa fa-list-ul"></i>
               <span>Daftar Materi</span>
             </a>

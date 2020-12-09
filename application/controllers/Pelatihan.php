@@ -88,7 +88,7 @@ class Pelatihan extends AUTH_Controller {
 		$data['deskripsi'] = "Tambah data pelatihan TerasAsuh sesuai kebutuhan";
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
-		$this->template->views('pelatihan/kelas_add');
+		$this->template->views('kelas/kelas_add');
 	}
 
 	public function tampil() {
