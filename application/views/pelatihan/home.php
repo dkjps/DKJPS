@@ -3,14 +3,8 @@
 </div>
 
 <div class="box">
-  <div class="box-header">
-    <div class="container">
-      <div class="row">
-        <div class="col align-self-end">
-          <a href="<?php echo base_url('Pelatihan/tambahPelatihan'); ?>" class="btn btn-primary btn-block btn-flat" role="button" aria-pressed="true"><span>Tambah Pelatihan</span></a>
-        </div>
-      </div>      
-    </div>
+  <div class="box-header">    
+    <a href="<?php echo base_url('Pelatihan/tambahPelatihan'); ?>" class="btn btn-info pull-right" role="button" aria-pressed="true"><i class="glyphicon glyphicon-plus"></i> Tambah Pelatihan</a>
   </div>
 
 
@@ -36,7 +30,7 @@
 
 <div id="tempat-modal"></div>
 
-<?php show_my_confirm('konfirmasiHapus', 'hapus-dataPegawai', 'Hapus Data Ini?', 'Ya, Hapus Data Ini', base_url()); ?>
+<?php show_my_confirm('konfirmasiHapus', 'hapus-dataPegawai', 'Hapus Data Ini?', 'Ya', 'Tidak'); ?>
 <?php
 $data['judul'] = 'Pelatihan';
 $data['url'] = 'Pelatihan/homePelatihan';

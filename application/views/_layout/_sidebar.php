@@ -28,7 +28,7 @@
 
       <li class="header text-uppercase"><span>Pelatihan</span></li>
 
-      <li <?php if ($page == 'pegawai') {echo 'class="active"';} ?>>
+      <li class="<?=(strtolower($page)=='pelatihan'?'active':'') ?>">
         <a href="<?php echo base_url('Pelatihan'); ?>">
           <i class="fa fa-leanpub"></i>
           <span>Data Pelatihan</span>
@@ -36,7 +36,7 @@
         </a>
       </li>
 
-      <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
+      <li class="<?=(strtolower($page)=='kelas'?'active':'') ?>">
         <a>
           <i class="fa fa-bell"></i>
           <span>Data Kelas</span>

@@ -1,37 +1,30 @@
 <div class="msg" style="display:none;">
   <?php echo @$this->session->flashdata('msg'); ?>
 </div>
-
+<?php
+  $id = $this->uri->segment(3);
+?>
 <div class="box">
   <div class="box-body">
-  <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputNamaPelatihan">Nama Kelas Pelatihan</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Nama Pelatihan">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputTanggalPelatihan">Tanggal Mulai</label>
-
-      <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="date"/>
-    </div>
-  </div>
-
-
-  <div class="form-group col-md-12">
-    <label for="inputAddress">Deskripsi Pelatihan</label>
-    <textarea class="form-control" cols="40" id="textarea" name="textarea" rows="10" style="resize:none" placeholder="Pelatihan ini tentang . . ."></textarea>
-  </div>
-
-  <div class="form-group col-md-12">
-  <button type="submit" class="btn btn-primary">Tambah Pelatihan</button>
-  </div>
-
-</form>
+    <form method="post" action="<?=base_url('Pelatihan/'.$action.'Pelatihan/'.$id)?>">
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="inputNamaPelatihan">Nama Kelas Pelatihan</label>
+          <input name="nama" type="text" class="form-control" value="<?=(!empty($detail)?$detail->nama:'')?>" placeholder="Nama Pelatihan" required>
+        </div>
+      </div>
+      <div class="form-group col-md-12">
+        <label for="inputAddress">Deskripsi Pelatihan</label>
+        <textarea class="form-control" cols="40" id="textarea" name="deskripsi" rows="10" style="resize:none" placeholder="Pelatihan ini tentang . . ." required><?=(!empty($detail)?$detail->deskripsi:'')?></textarea>
+      </div>
+      <div class="form-group col-md-12">
+        <button type="submit" class="btn btn-primary" name="submit">Simpan</button>
+      </div>
+    </form>
   </div>
 </div>
 
 <?php
-  $data['judul'] = 'TambahPelatihan';
-  $data['url'] = 'Pelatihan/addPelatihan';
+// $data['judul'] = 'TambahPelatihan';
+// $data['url'] = 'Pelatihan/addPelatihan';
 ?>
