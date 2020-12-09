@@ -46,7 +46,7 @@
 
 <div id="tempat-modal"></div>
 
-<?php show_my_confirm('konfirmasiHapus', 'hapus-dataPegawai', 'Hapus Data Ini?', 'Ya, Hapus Data Ini'); ?>
+<?php show_my_confirm('konfirmasiHapus', 'hapus-dataPegawai', 'Hapus Data Ini?', 'Ya, Hapus Data Ini', base_url()); ?>
 <?php
   $data['judul'] = 'Pelatihan';
   $data['url'] = 'Pelatihan/homePelatihan';

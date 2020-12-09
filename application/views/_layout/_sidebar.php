@@ -8,7 +8,7 @@
         <img src="<?php echo base_url(); ?>assets/img/profil1.jpg" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Khafido</p>
+        <p><?=$_SESSION['namalengkap']?></p>
         <!-- Status -->
         <a href="<?php echo base_url(); ?>assets/#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>

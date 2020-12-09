@@ -60,7 +60,7 @@
 		}
 	}
 
-	function show_my_confirm($id='', $class='', $title='Konfirmasi', $yes = 'Ya', $no = 'Tidak', $href) {
+	function show_my_confirm($id='', $class='', $title='Konfirmasi', $yes = 'Ya', $no = 'Tidak') {
 		$_ci = &get_instance();
 		if ($id != '') {
 			echo '<div class="modal fade" id="' .$id .'" role="dialog">
@@ -70,7 +70,7 @@
 							      <h3 style="display:block; text-align:center;">' .$title .'</h3>
 										<div class="row">
 											<div class="col-md-12" style="">
-								        <button class="form-control btn btn-primary ' .$class .'" style="width:40%; margin-left:10%;"> <i class="glyphicon glyphicon-ok-sign"></i> Ya</button>
+								        <button class="form-control btn btn-primary ' .$class .'" style="width:40%; margin-left:10%;"> <i class="glyphicon glyphicon-ok-sign"></i> '. $yes.' </button>
 								        <button class="form-control btn btn-danger" style="width:40%;" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> ' .$no .'</button>
 								      </div>
 										</div>
