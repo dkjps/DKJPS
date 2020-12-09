@@ -10,9 +10,9 @@
         <a href="<?php echo base_url('Pelatihan/tambahPelatihan'); ?>" class="btn btn-primary btn-block btn-flat" role="button" aria-pressed="true"><span>Tambah Pelatihan</span></a>
     </div>
     </div>
-  
+
   </div>
-    
+
     <!-- <div class="col-md-3">
         <a href="<?php echo base_url('Pegawai/export'); ?>" class="form-control btn btn-default"><i class="glyphicon glyphicon glyphicon-floppy-save"></i> Export Data Excel</a>
     </div>
@@ -36,14 +36,13 @@
           <th style="text-align: center;">Aksi</th>
         </tr>
       </thead>
-      <tbody id="daftar-pelatihan">        
+      <tbody id="daftar-pelatihan">
       </tbody>
     </table>
   </div>
   </div>
 </div>
 
-<?php echo $modal_tambah_pegawai; ?>
 
 <div id="tempat-modal"></div>
 

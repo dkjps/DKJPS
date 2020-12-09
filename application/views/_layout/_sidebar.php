@@ -5,10 +5,10 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="<?php echo base_url(); ?>assets/img/<?php echo $userdata->foto; ?>" class="img-circle" alt="User Image">
+        <img src="<?php echo base_url(); ?>assets/img/profil1.jpg" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p><?php echo $userdata->nama; ?></p>
+        <p>Khafido</p>
         <!-- Status -->
         <a href="<?php echo base_url(); ?>assets/#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
@@ -29,30 +29,12 @@
       <li class="header text-uppercase"><span>Pelatihan</span></li>
 
       <li <?php if ($page == 'pegawai') {echo 'class="active"';} ?>>
-      <a href="<?php echo base_url('Pelatihan'); ?>">
+        <a href="<?php echo base_url('Pelatihan'); ?>">
           <i class="fa fa-leanpub"></i>
           <span>Data Pelatihan</span>
           <i class="fa fa-angle-left pull-right"></i>
         </a>
-
-        <!-- <ul class="treeview-menu">
-        <li <?php if ($page == 'pegawai') {echo 'class="active"';} ?>>
-        <a href="<?php echo base_url('Pelatihan'); ?>">
-          <i class="fa fa-list-ul"></i>
-          <span>Daftar Data Pelatihan</span>
-        </a>
       </li>
-    
-      <li <?php if ($page == 'tambahPelatihan') {echo 'class="active"';} ?>>
-        <a href="<?php echo base_url('Pelatihan/addPelatihan'); ?>">
-          <i class="fa fa-plus-circle"></i>
-          <span>Tambah Data Pelatihan</span>
-        </a>
-      </li>
-       -->
-
-        <!-- </ul> -->
-    </li>
 
       <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
         <a>
@@ -63,25 +45,22 @@
 
         <ul class="treeview-menu">
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-          <a href="<?php echo base_url('Kelas'); ?>">
-            <i class="fa fa-list-ul"></i>
-            <span>Daftar Kelas Pelatihan</span>
-          </a>
-        </li>
-    
-    
+            <a href="<?php echo base_url('Kelas'); ?>">
+              <i class="fa fa-list-ul"></i>
+              <span>Daftar Kelas Pelatihan</span>
+            </a>
+          </li>
+
+
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
             <a href="<?php echo base_url('Posisi'); ?>">
               <i class="fa fa-list-ul"></i>
               <span>Daftar Materi</span>
             </a>
           </li>
-    
-      
         </ul>
-
       </li>
-      
+
       <li <?php if ($page == 'kota') {echo 'class="active"';} ?>>
         <a>
           <i class="fa fa-users"></i>
@@ -90,26 +69,23 @@
         </a>
 
         <ul class="treeview-menu">
-        <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-        <a href="<?php echo base_url('Posisi'); ?>">
-          <i class="fa fa-list-ul"></i>
-          <span>Daftar Pemateri</span>
-        </a>
-      </li>
-    
-      <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-        <a href="<?php echo base_url('Posisi'); ?>">
-          <i class="fa fa-plus-circle"></i>
-          <span>Tambah Jadwal Pemateri</span>
-        </a>
-      </li>
-      
+          <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
+            <a href="<?php echo base_url('Posisi'); ?>">
+              <i class="fa fa-list-ul"></i>
+              <span>Daftar Pemateri</span>
+            </a>
+          </li>
+
+          <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
+            <a href="<?php echo base_url('Posisi'); ?>">
+              <i class="fa fa-plus-circle"></i>
+              <span>Tambah Jadwal Pemateri</span>
+            </a>
+          </li>
         </ul>
       </li>
 
-
       <li class="header text-uppercase"><span>Aktivitas</span></li>
-          
       <li <?php if ($page == 'kota') {echo 'class="active"';} ?>>
         <a href="<?php echo base_url('Kota'); ?>">
           <i class="fa fa-th-list"></i>
@@ -118,27 +94,23 @@
         </a>
 
         <ul class="treeview-menu">
-        <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-        <a href="<?php echo base_url('Posisi'); ?>">
-          <i class="fa fa-check-circle"></i>
-          <span>Aktivitas Hari Ini</span>
-        </a>
-      </li>
-    
-      <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-        <a href="<?php echo base_url('Posisi'); ?>">
-          <i class="fa fa-list-alt"></i>
-          <span>Daftar Aktivitas</span>
-        </a>
-      </li>
-      
-        </ul>
+          <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
+            <a href="<?php echo base_url('Posisi'); ?>">
+              <i class="fa fa-check-circle"></i>
+              <span>Aktivitas Hari Ini</span>
+            </a>
+          </li>
 
+          <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
+            <a href="<?php echo base_url('Posisi'); ?>">
+              <i class="fa fa-list-alt"></i>
+              <span>Daftar Aktivitas</span>
+            </a>
+          </li>
+        </ul>
       </li>
 
       <li class="header text-uppercase"><span>Akun</span></li>
-
-          
       <li <?php if ($page == 'kota') {echo 'class="active"';} ?>>
         <a href="<?php echo base_url('Kota'); ?>">
           <i class="fa fa-user"></i>
@@ -147,23 +119,23 @@
         </a>
 
         <ul class="treeview-menu">
-        <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-        <a href="<?php echo base_url('Posisi'); ?>">
-          <i class="fa fa-cogs"></i>
-          <span>Pengaturan Akun</span>
-        </a>
-      </li>
-    
-      <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-        <a href="<?php echo base_url('Posisi'); ?>">
-          <i class="fa fa-sign-out"></i>
-          <span>Keluar</span>
-        </a>
-      </li>
-      
+          <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
+            <a href="<?php echo base_url('Posisi'); ?>">
+              <i class="fa fa-cogs"></i>
+              <span>Pengaturan Akun</span>
+            </a>
+          </li>
+
+          <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
+            <a href="<?php echo base_url('Posisi'); ?>">
+              <i class="fa fa-sign-out"></i>
+              <span>Keluar</span>
+            </a>
+          </li>
+
         </ul>
       </li>
-    
+
     </ul>
     <!-- /.sidebar-menu -->
   </section>
