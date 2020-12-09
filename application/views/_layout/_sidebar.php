@@ -35,7 +35,7 @@
           <i class="fa fa-angle-left pull-right"></i>
         </a>
 
-        <!-- <ul class="treeview-menu">
+      <ul class="treeview-menu">
         <li <?php if ($page == 'pegawai') {echo 'class="active"';} ?>>
         <a href="<?php echo base_url('Pelatihan'); ?>">
           <i class="fa fa-list-ul"></i>
