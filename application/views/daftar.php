@@ -18,9 +18,27 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/iCheck/square/blue.css">
   </head>
 
+  <style>
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+</style>
+
   <body class="hold-transition login-page">
   
   <div class="login-box">
+  <div class="login-logo">
+    Daftar Panitia <br> <b>TerasAsuh</b>
+  </div>
+
   <div class="login-box-body">
   <form class="form-horizontal">
   <div class="form-group">
@@ -41,7 +59,7 @@
         <div class="input-group-addon">
           <i class="fa fa-cc"></i>
         </div> 
-        <input id="text2" name="text2" placeholder="masukkan email" type="text" required="required" class="form-control">
+        <input id="text2" name="text2" placeholder="masukkan email" type="email" required="required" class="form-control">
       </div>
     </div>
   </div>
@@ -52,7 +70,7 @@
         <div class="input-group-addon">
           <i class="fa fa-phone"></i>
         </div> 
-        <input id="text" name="text" placeholder="masukkan nomor" type="text" class="form-control" required="required">
+        <input id="text" name="text" placeholder="masukkan nomor" type="number" class="form-control" required="required">
       </div>
     </div>
   </div>
@@ -63,7 +81,7 @@
         <div class="input-group-addon">
           <i class="fa fa-calendar"></i>
         </div> 
-        <input id="text4" name="text4" placeholder="Pilih tanggal lahir" type="text" class="form-control" required="required">
+        <input id="text4" name="text4" placeholder="Pilih tanggal lahir" type="date" class="form-control" required="required">
       </div>
     </div>
   </div>
@@ -87,7 +105,18 @@
         <div class="input-group-addon">
           <i class="fa fa-lock"></i>
         </div> 
-        <input id="text3" name="text3" placeholder="password anda" type="text" class="form-control" required="required">
+        <input id="text3" name="text3" placeholder="password anda" type="password" class="form-control" required="required">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="text3" class="control-label col-md-2">Password Ulang</label> 
+    <div class="col-md-8">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="fa fa-lock"></i>
+        </div> 
+        <input id="text3" name="text3" placeholder="tulis ulang password anda" type="password" class="form-control" required="required">
       </div>
     </div>
   </div>
@@ -102,14 +131,40 @@
   </div>
   <div class="form-group">
     <label for="select" class="control-label col-md-2">Asal Provinsi</label> 
-    <div class="col-md-3">
+    <div class="col-md-8">
+      <select id="select" name="select" class="select form-control">
+      </select>
+    </div>
+  </div> 
+  <div class="form-group">
+    <label for="select" class="control-label col-md-2">Asal Kabupaten / Kota</label> 
+    <div class="col-md-8">
+      <select id="select" name="select" class="select form-control">
+      </select>
+    </div>
+  </div> 
+  <div class="form-group">
+    <label for="select" class="control-label col-md-2">Asal Kecamatan</label> 
+    <div class="col-md-8">
+      <select id="select" name="select" class="select form-control">
+      </select>
+    </div>
+  </div> 
+  <div class="form-group">
+    <label for="select" class="control-label col-md-2">Asal Desa</label> 
+    <div class="col-md-8">
       <select id="select" name="select" class="select form-control">
       </select>
     </div>
   </div> 
   <div class="form-group row">
-    <div class="col col-md-8">
-      <button name="submit" type="submit" class="btn btn-primary">Daftar</button>
+    <div class="col col-md-12 ">
+      <button name="submit" type="submit" class="btn btn-primary btn-block btn-flat">Daftar</button>
+    </div>
+  </div>
+  <div class="form-group row">
+  <div class="col col-md-12  text-center">
+      <a class="btn" href="<?php echo base_url('Daftar'); ?>">Sudah punya akun ? Login Disini</a>
     </div>
   </div>
 </form>  

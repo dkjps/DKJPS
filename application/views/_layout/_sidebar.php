@@ -63,7 +63,7 @@
 
         <ul class="treeview-menu">
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-          <a href="<?php echo base_url('Posisi'); ?>">
+          <a href="<?php echo base_url('Kelas'); ?>">
             <i class="fa fa-list-ul"></i>
             <span>Daftar Kelas Pelatihan</span>
           </a>

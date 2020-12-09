@@ -11,10 +11,11 @@ class Auth extends CI_Controller {
 		$session = $this->session->userdata('status');
 
 		if ($session == '') {
-			$this->load->view('daftar');
+			$this->load->view('login');
 		} else {
 			redirect('Home');
 		}
+
 	}
 
 	public function login() {

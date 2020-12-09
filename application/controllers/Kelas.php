@@ -16,12 +16,12 @@ class Kelas extends AUTH_Controller {
 		$data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "Pelatihan";
-		$data['judul'] = "Daftar Pelatihan";
+		$data['judul'] = "Detail Kelas";
 		$data['deskripsi'] = "Daftar pelatihan TerasAsuh";
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
 
-		$this->template->views('pelatihan/home', $data);
+		$this->template->views('kelas/detail_kelas', $data);
 	}
 
 	public function tambahPelatihan(){
