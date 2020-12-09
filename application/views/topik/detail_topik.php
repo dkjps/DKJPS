@@ -20,7 +20,7 @@
   <table id="list-data" class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th>Nama Pelatihan</th>
+          <th>Nama Materi</th>
           <th>Deskripsi Pelatihan</th>
           <th>Jumlah Kelas</th>
           <th>Jumlah Pemateri</th>

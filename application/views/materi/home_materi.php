@@ -4,14 +4,8 @@
 
 <div class="box">
   <div class="box-header">
-    <div class="col-md-6" style="padding: 0;">
-        <a href="<?php echo base_url('Pelatihan/AddPelatihan'); ?>" class="btn btn-primary btn-block btn-flat" role="button" aria-pressed="true"><span>Tambah Pelatihan</span></a>
-    </div>
-    <div class="col-md-3">
-        <a href="<?php echo base_url('Pegawai/export'); ?>" class="form-control btn btn-default"><i class="glyphicon glyphicon glyphicon-floppy-save"></i> Export Data Excel</a>
-    </div>
-    <div class="col-md-3">
-        <button class="form-control btn btn-default" data-toggle="modal" data-target="#import-pegawai"><i class="glyphicon glyphicon glyphicon-floppy-open"></i> Import Data Excel</button>
+    <div class="col-md-6 pull-right" style="padding: 0;">
+        <a href="<?php echo base_url('Materi/tambahMateri'); ?>" class="btn btn-primary btn-block btn-flat" role="button" aria-pressed="true"><span><i class="glyphicon glyphicon-plus-sign"></i> Tambah Materi</span></a>
     </div>
   </div>
   <!-- /.box-header -->
@@ -20,11 +14,10 @@
   <table id="list-data" class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th>Nama Pelatihan</th>
-          <th>Deskripsi Pelatihan</th>
-          <th>Jumlah Kelas</th>
-          <th>Jumlah Pemateri</th>
-          <th>Status</th>
+          <th>Nama Materi</th>
+          <th>Deksripsi Materi</th>
+          <th>Pelatihan</th>
+          <th>Topik</th>
           <th style="text-align: center;">Aksi</th>
         </tr>
       </thead>

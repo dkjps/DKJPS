@@ -24,7 +24,7 @@ class Pemateri extends AUTH_Controller {
 		$this->template->views('pelatihan/home', $data);
 	}
 
-	public function tambahPelatihan(){
+	public function tambahPemateri(){
         $data['userdata'] = $this->userdata;
 		$data['dataPegawai'] = $this->M_pegawai->select_all();
 		$data['dataPosisi'] = $this->M_posisi->select_all();
@@ -35,7 +35,7 @@ class Pemateri extends AUTH_Controller {
 		$data['deskripsi'] = "Tambah data pelatihan TerasAsuh sesuai kebutuhan";
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
-		$this->template->views('pelatihan/pelatihan_add');
+		$this->template->views('pemateri/pemateri_add');
 	}
 
 	// public function tampil() {

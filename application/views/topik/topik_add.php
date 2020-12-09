@@ -17,7 +17,7 @@
     <div class="form-group">
     <label class="col-md-2 control-label" for="inputNamaPelatihan">Judul Topik</label>
     <div class="col-md-8">
-      <input type="text" class="form-control" id="namaKelas" placeholder="Nama Topik">
+      <input type="text" class="form-control" id="namaKelas" placeholder="Nama Topik" required>
     </div>
     </div>
 
@@ -33,19 +33,18 @@
     <div class="form-group">
     <label class="col-md-2 control-label" for="inputNamaPelatihan">Waktu Topik</label>
     <div class="col-md-3"style=>
-      <input type="date" class="form-control" id="namaKelas" placeholder="Tanggal Mulai">
+      <input type="date" class="form-control" id="namaKelas" placeholder="Tanggal Mulai" required>
       <span  class="form-text text-muted" >Tanggal Mulai</span>
     </div>
     <div class="col-md-3" >
-      <input type="time" class="form-control" id="namaKelas" placeholder="Jam Mulai">
+      <input type="time" class="form-control" id="namaKelas" placeholder="Jam Mulai" required>
       <span class="form-text text-muted" >Jam Mulai</span>
     </div>
     </div>
 
     <div class="form-group">
-      <div class="col-md-2"></div>
-      <div class="col-md-2 ">
-      <a href="<?php echo base_url('Kelas'); ?>" class="btn btn-danger">Kembali</a>
+      <div class="col-md-12 text-center">
+      <a href="<?php echo base_url('Kelas/detailKelas'); ?>" class="btn btn-danger">Kembali</a>
       <button type="button" class="btn btn-primary">Simpan Topik</button>
       </div>
     </div>

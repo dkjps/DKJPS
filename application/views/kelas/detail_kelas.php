@@ -66,7 +66,7 @@
             <div class="tab-pane active" id="tab_materi">
           
               <div class="col col-md-12" style="margin-top:10px; margin-bottom:5px;">
-                <a href="<?php echo base_url('Topik/tambahTopik'); ?>" class="btn btn-primary" style="margin-top:10px; margin-bottom:5px;"><i class="glyphicon glyphicon-plus-sign"></i>  Tambah Topik</a>
+                <a href="<?php echo base_url('Topik/tambahTopik'); ?>" class="btn btn-primary pull-right" style="margin-top:10px; margin-bottom:5px;"><i class="glyphicon glyphicon-plus-sign"></i>  Tambah Topik</a>
               </div>
               
               <div class="col col-md-12">
@@ -93,7 +93,7 @@
             <div class="tab-pane" id="tab_pemateri">
               <!-- tablePemateri -->
               <div class="col col-md-12">
-              <a href="" class="btn btn-primary" style="margin-top:10px; margin-bottom:5px;"><i class="glyphicon glyphicon-plus-sign"></i>  Tambah Pemateri</a>
+              <a href="<?php echo base_url('Pemateri/tambahPemateri'); ?>" class="btn btn-primary pull-right" style="margin-top:10px; margin-bottom:5px;"><i class="glyphicon glyphicon-plus-sign"></i>  Tambah Pemateri</a>
               </div>
 
               <div class="col col-md-12">
@@ -104,8 +104,8 @@
                       <th>ID Pemateri</th>
                       <th>Nama Pemateri</th>
                       <th>Provinsi</th>
-                      <th>Total Materi</th>
-                      <th>Materi Diampu</th>
+                      <th>Total Topik</th>
+                      <th>Topik Diampu</th>
                       <th style="text-align: center;">Aksi</th>
                     </tr>
                   </thead>

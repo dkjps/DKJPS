@@ -21,6 +21,21 @@ class Kelas extends AUTH_Controller {
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
 
+		$this->template->views('kelas/daftar_kelas', $data);
+	}
+
+	public function detailKelas() {
+		$data['userdata'] = $this->userdata;
+		$data['dataPegawai'] = $this->M_pegawai->select_all();
+		$data['dataPosisi'] = $this->M_posisi->select_all();
+		$data['dataKota'] = $this->M_kota->select_all();
+
+		$data['page'] = "Pelatihan";
+		$data['judul'] = "Detail Kelas";
+		$data['deskripsi'] = "Daftar pelatihan TerasAsuh";
+
+		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
+
 		$this->template->views('kelas/detail_kelas', $data);
 	}
 
@@ -38,10 +53,10 @@ class Kelas extends AUTH_Controller {
 		$this->template->views('pelatihan/pelatihan_add');
 	}
 
-	// public function tampil() {
-	// 	$data['dataPegawai'] = $this->M_pegawai->select_all();
-	// 	// $this->load->view('pelatihan/data_tabel', $data);
-	// }
+	public function tampil() {
+		$data['dataPegawai'] = $this->M_pegawai->select_all();
+		$this->load->view('pelatihan/data_tabel', $data);
+	}
 
 	public function prosesTambah() {
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required');

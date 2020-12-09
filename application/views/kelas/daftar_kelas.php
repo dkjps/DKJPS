@@ -1,26 +1,57 @@
-<?php
-  $warna = array('danger', 'warning', 'primary', 'success');
+<div class="msg" style="display:none;">
+  <?php echo @$this->session->flashdata('msg'); ?>
+</div>
 
-  foreach ($dataPegawai as $pegawai) {
-    $statusPelatihan = rand(0,3);
-    ?>
-    <tr>
-      <td style="min-width:230px;"><?php echo $pegawai->pegawai; ?></td>
-      <td><?php echo $pegawai->telp; ?></td>
-      <td><?php echo $pegawai->kota; ?></td>
-      <td><?php echo $pegawai->kelamin; ?></td>
-      <td class="text-center">
-        <span class="btn btn-<?=$warna[$statusPelatihan]?>">
-        <?php echo $pegawai->posisi; ?>
-        </span>
-      </td>
-      <td class="text-center" style="min-width:230px;">
-        <button class="btn btn-success update-dataPegawai" data-id="<?php echo $pegawai->id; ?>"><i class="glyphicon glyphicon-eye-open"></i></button>
-        <button class="btn btn-warning update-dataPegawai" data-id="<?php echo $pegawai->id; ?>"><i class="glyphicon glyphicon-share-alt"></i></button>
-        <button class="btn btn-primary update-dataPegawai" data-id="<?php echo $pegawai->id; ?>"><i class="glyphicon glyphicon-edit"></i></button>
-        <button class="btn btn-danger konfirmasiHapus-pegawai" data-id="<?php echo $pegawai->id; ?>" data-toggle="modal" data-target="#konfirmasiHapus"><i class="glyphicon glyphicon-trash"></i></button>
-      </td>
-    </tr>
-    <?php
-  }
+<div class="box">
+  <div class="box-header">
+  <div class="container">
+  <div class="row">
+    <div class="col align-self-end">
+        <a href="<?php echo base_url('Pelatihan/tambahKelas'); ?>" class="btn btn-primary btn-block btn-flat" role="button" aria-pressed="true"><span>Tambah Kelas</span></a>
+    </div>
+    </div>
+
+  </div>
+
+    <!-- <div class="col-md-3">
+        <a href="<?php echo base_url('Pegawai/export'); ?>" class="form-control btn btn-default"><i class="glyphicon glyphicon glyphicon-floppy-save"></i> Export Data Excel</a>
+    </div>
+    <div class="col-md-3">
+        <button class="form-control btn btn-default" data-toggle="modal" data-target="#import-pegawai"><i class="glyphicon glyphicon glyphicon-floppy-open"></i> Import Data Excel</button>
+    </div> -->
+  </div>
+
+
+  <!-- /.box-header -->
+  <div class="box-body">
+  <div class="table-responsive">
+  <table id="list-data" class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nama Kelas</th>
+          <th>Nama Pelatihan</th>
+          <th>Jumlah Peserta</th>
+          <th>Jumlah Pemateri</th>
+          <th>Tgl Buka</th>
+          <th>Tgl Selesai</th>
+          <th>Status</th>
+          <th style="text-align: center;">Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="daftar-kelas">
+        <?php $this->load->view('kelas/data_kelas'); ?>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>
+
+<div id="tempat-modal"></div>
+
+<?php show_my_confirm('konfirmasiHapus', 'hapus-dataPegawai', 'Hapus Data Ini?', 'Ya, Hapus Data Ini'); ?>
+<?php
+  $data['judul'] = 'Pelatihan';
+  $data['url'] = 'Pelatihan/homePelatihan';
+  echo show_my_modal('modals/modal_import', 'import-pegawai', $data);
 ?>
