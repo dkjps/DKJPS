@@ -7,10 +7,9 @@
     ?>
     <tr>
       <td><?=$i++?></td>
-      <td style="min-width:230px;"><?php echo $p->nama; ?></td>
-      <td><?php echo $p->deskripsi; ?></td>
+      <td style="min-width:100px;"><a class="" href="<?php echo base_url("Pelatihan/detailPelatihan/$p->id"); ?>"><?php echo $p->nama; ?></a></td>
+      <td style="min-width:230px;"><?php echo $p->deskripsi; ?></td>
       <td class="text-center" style="min-width:230px;">
-        <a class="btn btn-success" href="<?php echo base_url("Pelatihan/detailPelatihan/$p->id"); ?>"><i class="glyphicon glyphicon-eye-open"></i></a>
         <button class="btn btn-primary update-dataPegawai" data-id="<?php echo $p->id; ?>"><i class="glyphicon glyphicon-edit"></i></button>
         <button class="btn btn-danger konfirmasiHapus-pegawai" data-id="<?php echo $p->id; ?>" data-toggle="modal" data-target="#konfirmasiHapus"><i class="glyphicon glyphicon-trash"></i></button>
       </td>

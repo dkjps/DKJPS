@@ -32,7 +32,8 @@
           <th>Nama Kelas</th>
           <th>Jumlah Peserta</th>
           <th>Jumlah Pemateri</th>
-          <th>Periode Kelas</th>
+          <th>Tgl Buka</th>
+          <th>Tgl Selesai</th>
           <th>Status</th>
           <th style="text-align: center;">Aksi</th>
         </tr>
