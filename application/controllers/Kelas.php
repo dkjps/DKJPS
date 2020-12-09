@@ -4,22 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Kelas extends AUTH_Controller {
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('M_pegawai');
-		$this->load->model('M_posisi');
-		$this->load->model('M_kota');
+		$this->load->model('GeneralApiModel');
 	}
 
 	public function index() {
-		$data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
-
-		$data['page'] = "Pelatihan";
+		$data['page'] = "kelas";
 		$data['judul'] = "Detail Kelas";
-		$data['deskripsi'] = "Daftar pelatihan TerasAsuh";
-
-		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
+		$data['deskripsi'] = "Daftar kelas pada pelatihan TerasAsuh";
+		$data['detail'] = $this->GeneralApiModel->getAllTransactional('kelas_pelatihan')->result();
 
 		$this->template->views('kelas/daftar_kelas', $data);
 	}
