@@ -22,7 +22,12 @@
 	}
 
 	function refresh() {
-		MyTable = $('#list-data').dataTable();
+		MyTable = $('#list-data').dataTable({			
+			scrollX: true,
+			fixedColumns:   {
+				leftColumns:2
+			}
+		});
 	}
 
 	function effect_msg_form() {

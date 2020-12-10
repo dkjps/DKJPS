@@ -10,10 +10,12 @@
 
     <!-- jQuery 2.2.3 -->
     <script src="<?php echo base_url(); ?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript"></script>    
 
-    </script>
-
+    <style>
+      .DTFC_LeftBodyLiner{overflow-y:unset !important}
+      .DTFC_RightBodyLiner{overflow-y:unset !important}
+    </style>
   </head>
 
   <body class="hold-transition skin-blue sidebar-mini">

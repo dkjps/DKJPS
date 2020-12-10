@@ -11,7 +11,7 @@
 
   <!-- /.box-header -->
   <div class="box-body">
-    <div class="table-responsive">
+    <div class="">
       <table id="list-data" class="table table-bordered table-striped">
         <thead>
           <tr>
