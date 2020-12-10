@@ -50,7 +50,7 @@ class Kelas extends AUTH_Controller {
 		$data['deskripsi'] = "Tambah kelas pelatihan TerasAsuh sesuai kebutuhan";
 
 		$data['pelatihan'] = $this->GeneralApiModel->getAllMaster('masterdata_pelatihan')->result();
-		$this->template->views('Kelas/kelas_add', $data);
+		$this->template->views('kelas/kelas_add', $data);
 	}
 
 	public function ubahKelas($id_kelas){
@@ -69,7 +69,7 @@ class Kelas extends AUTH_Controller {
 			$result = $this->GeneralApiModel->updateTransactional($data, array('id'=>$id_kelas), 'transactional_kelas');
 			if ($result) {
 				$this->session->set_flashdata('msg', '<div class="col-md-12 alert alert-success" role="alert">Ubah Kelas Sukses</div>');
-				redirect(base_url("Kelas"));
+				redirect(base_url("kelas"));
 			}
 		}
 		$data['page'] = "kelas";
@@ -79,7 +79,7 @@ class Kelas extends AUTH_Controller {
 
 		$data['pelatihan'] = $this->GeneralApiModel->getAllMaster('masterdata_pelatihan')->result();
 		$data['detail'] = $this->GeneralApiModel->getWhereTransactional(array('id'=>$id_kelas),'transactional_kelas')->row();
-		$this->template->views('Kelas/kelas_add', $data);
+		$this->template->views('kelas/kelas_add', $data);
 	}
 
 	public function hapusKelas($id_kelas){
