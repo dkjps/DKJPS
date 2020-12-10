@@ -7,9 +7,9 @@
     ?>
     <tr>
       <td><?=$i++?></td>
-      <td><?php echo $d->nama_kelas; ?></td>
+      <td><a href="#"><?php echo $d->nama_kelas; ?></a></td>
       <td><?php echo $d->nama_pelatihan; ?></td>
-      <td><?php echo $d->jumlah_peserta; ?></td>
+      <td><?php echo ($d->jumlah_peserta?$d->jumlah_peserta:0); ?></td>
       <td><?php echo ($d->jumlah_pemateri?$d->jumlah_pemateri:0); ?></td>
       <td><?php echo $d->tgl_buka; ?></td>
       <td><?php echo $d->tgl_selesai; ?></td>
@@ -20,8 +20,8 @@
       </td>
       <td class="text-center" style="min-width:230px;">
         <button class="btn btn-warning update-dataPegawai" data-id="<?php echo $d->id_kelas; ?>"><i class="glyphicon glyphicon-share-alt"></i></button>
-        <button class="btn btn-primary update-dataPegawai" data-id="<?php echo $d->id_kelas; ?>"><i class="glyphicon glyphicon-edit"></i></button>
-        <button class="btn btn-danger konfirmasiHapus-pegawai" data-id="<?php echo $d->id_kelas; ?>" data-toggle="modal" data-target="#konfirmasiHapus"><i class="glyphicon glyphicon-trash"></i></button>
+        <a href="<?=base_url("pelatihan/ubahKelas/$d->id_pelatihan/$d->id_kelas")?>" class="btn btn-primary update-dataPegawai" ><i class="glyphicon glyphicon-edit"></i></a>
+        <button class="btn btn-danger konfirmasiHapus-pegawai" onclick="konfirmasiHapus('<?=base_url("Pelatihan/hapusKelas/$d->id_pelatihan/$d->id_kelas")?>')"><i class="glyphicon glyphicon-trash"></i></button>
       </td>
     </tr>
     <?php

@@ -404,4 +404,10 @@
 	$('#update-posisi').on('hidden.bs.modal', function () {
 	  $('.form-msg').html('');
 	})
+
+	
+	  function konfirmasiHapus(link){
+	    $('#btnYa').attr('href', link);
+	    $('#konfirmasiHapus').modal('show');
+	  }
 </script>

@@ -32,12 +32,3 @@
   </div>
 </div>
 </div>
-
-<div id="tempat-modal"></div>
-
-<?php show_my_confirm('konfirmasiHapus', 'hapus-dataPegawai', 'Hapus Data Ini?', 'Ya, Hapus Data Ini'); ?>
-<?php
-$data['judul'] = 'Pelatihan';
-$data['url'] = 'Pelatihan/homePelatihan';
-echo show_my_modal('modals/modal_import', 'import-pegawai', $data);
-?>

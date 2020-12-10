@@ -2,18 +2,18 @@
   <?php echo @$this->session->flashdata('msg'); ?>
 </div>
 <?php
-  $id = $this->uri->segment(3);
+  $id_kelas = $this->uri->segment(4);
+  $id_pelatihan = $this->uri->segment(3);
 ?>
 <div class="box">
   <div class="box-body">
-    <form class="form-horizontal" method="post" action="<?=base_url('Kelas/'.$action.'Kelas/'.$id)?>">
+    <form class="form-horizontal" method="post" action="<?=base_url('Pelatihan/'.$action.'Kelas/'.$id_pelatihan.'/'.$id_kelas)?>">
       <div class="form-group">
         <label class="col-md-2 control-label" for="inputNamaPelatihan">Pelatihan</label>
         <div class="col-md-8">
           <select class="form-control" name="pelatihan">
             <?php
             foreach ($pelatihan as $p) {
-              $id_pelatihan = (!empty($detail)?$detail->id_pelatihan:0);
               echo "<option value=".$p->id;
               echo ($p->id==$id_pelatihan?' selected':'');
               echo ">".$p->nama."</option>";

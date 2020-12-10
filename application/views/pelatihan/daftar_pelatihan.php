@@ -11,7 +11,7 @@
       <td style="min-width:0;"><?php echo $p->deskripsi; ?></td>
       <td class="text-center" style="min-width:230px;">
         <a href="<?=base_url("pelatihan/ubahPelatihan/$p->id")?>" class="btn btn-primary update-dataPegawai" data-id="<?php echo $p->id; ?>"><i class="glyphicon glyphicon-edit"></i></a>
-        <button class="btn btn-danger konfirmasiHapus-pegawai" data-id="<?php echo $p->id; ?>" onclick="konfirmasiHapus('<?=base_url("Pelatihan/hapusPelatihan/$p->id")?>')"><i class="glyphicon glyphicon-trash"></i></button>
+        <button class="btn btn-danger konfirmasiHapus-pegawai" onclick="konfirmasiHapus('<?=base_url("Pelatihan/hapusPelatihan/$p->id")?>')"><i class="glyphicon glyphicon-trash"></i></button>
       </td>
     </tr>
     <?php

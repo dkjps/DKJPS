@@ -8,9 +8,6 @@ class Posisi extends AUTH_Controller {
 	}
 
 	public function index() {
-		$data['userdata'] 	= $this->userdata;
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-
 		$data['page'] 		= "posisi";
 		$data['judul'] 		= "Data Posisi";
 		$data['deskripsi'] 	= "Manage Data Posisi";
@@ -81,7 +78,7 @@ class Posisi extends AUTH_Controller {
 	public function delete() {
 		$id = $_POST['id'];
 		$result = $this->M_posisi->delete($id);
-		
+
 		if ($result > 0) {
 			echo show_succ_msg('Data Posisi Berhasil dihapus', '20px');
 		} else {
@@ -101,28 +98,28 @@ class Posisi extends AUTH_Controller {
 
 	public function export() {
 		error_reporting(E_ALL);
-    
+
 		include_once './assets/phpexcel/Classes/PHPExcel.php';
 		$objPHPExcel = new PHPExcel();
 
 		$data = $this->M_posisi->select_all();
 
-		$objPHPExcel = new PHPExcel(); 
-		$objPHPExcel->setActiveSheetIndex(0); 
-		$rowCount = 1; 
+		$objPHPExcel = new PHPExcel();
+		$objPHPExcel->setActiveSheetIndex(0);
+		$rowCount = 1;
 
-		$objPHPExcel->getActiveSheet()->SetCellValue('A'.$rowCount, "ID"); 
+		$objPHPExcel->getActiveSheet()->SetCellValue('A'.$rowCount, "ID");
 		$objPHPExcel->getActiveSheet()->SetCellValue('B'.$rowCount, "Nama Posisi");
 		$rowCount++;
 
 		foreach($data as $value){
-		    $objPHPExcel->getActiveSheet()->SetCellValue('A'.$rowCount, $value->id); 
-		    $objPHPExcel->getActiveSheet()->SetCellValue('B'.$rowCount, $value->nama); 
-		    $rowCount++; 
-		} 
+		    $objPHPExcel->getActiveSheet()->SetCellValue('A'.$rowCount, $value->id);
+		    $objPHPExcel->getActiveSheet()->SetCellValue('B'.$rowCount, $value->nama);
+		    $rowCount++;
+		}
 
-		$objWriter = new PHPExcel_Writer_Excel2007($objPHPExcel); 
-		$objWriter->save('./assets/excel/Data Posisi.xlsx'); 
+		$objWriter = new PHPExcel_Writer_Excel2007($objPHPExcel);
+		$objWriter->save('./assets/excel/Data Posisi.xlsx');
 
 		$this->load->helper('download');
 		force_download('./assets/excel/Data Posisi.xlsx', NULL);
@@ -136,15 +133,15 @@ class Posisi extends AUTH_Controller {
 		} else {
 			$config['upload_path'] = './assets/excel/';
 			$config['allowed_types'] = 'xls|xlsx';
-			
+
 			$this->load->library('upload', $config);
-			
+
 			if ( ! $this->upload->do_upload('excel')){
 				$error = array('error' => $this->upload->display_errors());
 			}
 			else{
 				$data = $this->upload->data();
-				
+
 				error_reporting(E_ALL);
 				date_default_timezone_set('Asia/Jakarta');
 

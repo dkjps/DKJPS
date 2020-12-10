@@ -10,11 +10,6 @@ class Materi extends AUTH_Controller {
 	}
 
 	public function index() {
-		$data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
-
 		$data['page'] = "Pelatihan";
 		$data['judul'] = "Daftar Pelatihan";
 		$data['deskripsi'] = "Daftar pelatihan TerasAsuh";

@@ -1,13 +1,13 @@
 <div class="msg" style="display:none;">
   <?php echo @$this->session->flashdata('msg'); ?>
 </div>
-
+<?php
+  $id = $this->uri->segment(3);
+?>
 <div class="box">
   <div class="box-header">
-    <a href="<?php echo base_url('Pelatihan/tambahKelas'); ?>" class="btn btn-info pull-right" role="button" aria-pressed="true"><i class="glyphicon glyphicon-plus"></i> Tambah Kelas</a>
+    <a href="<?php echo base_url('Pelatihan/tambahKelas/'.$id); ?>" class="btn btn-info pull-right" role="button" aria-pressed="true"><i class="glyphicon glyphicon-plus"></i> Tambah Kelas</a>
   </div>
-
-
 
   <!-- /.box-header -->
   <div class="box-body">
@@ -37,8 +37,4 @@
 <div id="tempat-modal"></div>
 
 <?php show_my_confirm('konfirmasiHapus', 'hapus-dataPegawai', 'Hapus Data Ini?', 'Ya, Hapus Data Ini'); ?>
-<?php
-$data['judul'] = 'Pelatihan';
-$data['url'] = 'Pelatihan/homePelatihan';
-echo show_my_modal('modals/modal_import', 'import-pegawai', $data);
 ?>
