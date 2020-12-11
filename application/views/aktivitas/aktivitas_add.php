@@ -7,24 +7,29 @@
   <form>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputNamaPelatihan">Nama Kelas Pelatihan</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Nama Pelatihan">
+      <label for="inputNamaPelatihan">Nama Aktivitas</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="Nama Aktivitas">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputTanggalPelatihan">Tanggal Mulai</label>
-
-      <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+      <label for="inputTanggalPelatihan">Jam Aktivitas</label>
+      <input class="form-control" id="date" name="date" placeholder="HH/MM/SS" type="time" readonly="readonly"/>
     </div>
   </div>
 
 
   <div class="form-group col-md-12">
-    <label for="inputAddress">Deskripsi Pelatihan</label>
-    <textarea class="form-control" cols="40" id="textarea" name="textarea" rows="10" style="resize:none" placeholder="Pelatihan ini tentang . . ."></textarea>
+    <label for="inputAddress">Deskripsi Aktivitas</label>
+    <textarea class="form-control" cols="40" id="textarea" name="textarea" rows="10" style="resize:none" placeholder="Aktivitas anda ini tentang . . ."></textarea>
   </div>
 
-  <div class="form-group col-md-12">
-  <button type="submit" class="btn btn-primary">Tambah Pelatihan</button>
+  <div class="form-group col-md-12 text-center">
+  <div class="col-md-12 col-xs-6">
+  <a href="" class="btn btn-danger"><i class="fa fa-undo"></i> Kembali</a>
+  </div>
+  <div class="col-md-12 col-xs-6">
+  <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Tambah Aktivitas</button>
+  </div>
+  
   </div>
 
 </form>

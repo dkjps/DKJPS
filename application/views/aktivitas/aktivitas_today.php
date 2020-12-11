@@ -166,7 +166,7 @@
 
 <?php echo $modal_tambah_pegawai; ?>
 
-<a href="#" class="float">
+<a href="<?php echo base_url('Aktivitas/tambahAktivitas'); ?>" class="float">
 <i class="fa fa-plus my-float"></i>
 </a>
 
