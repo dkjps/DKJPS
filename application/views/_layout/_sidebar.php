@@ -26,7 +26,25 @@
         </a>
       </li>
 
-      <li class="header text-uppercase"><span>Pelatihan</span></li>
+      <li class="header text-uppercase"><span>Pelatihan - Pemateri</span></li>
+
+      <li class="<?=(strtolower($page)=='pelatihan'?'active':'') ?>">
+        <a href="<?php echo base_url('Pemateri_Kelas'); ?>">
+          <i class="fa fa-leanpub"></i>
+          <span>Data Kelas</span>
+          <i class="pull-right"></i>
+        </a>
+      </li>
+
+      <li class="<?=(strtolower($page)=='pelatihan'?'active':'') ?>">
+        <a href="<?php echo base_url('Pemateri_Jadwal'); ?>">
+          <i class="fa fa-clock-o"></i>
+          <span>Jadwal Pelatihan</span>
+          <i class="pull-right"></i>
+        </a>
+      </li>
+
+      <li class="header text-uppercase"><span>Pelatihan - Admin Operator</span></li>
 
       <li class="<?=(strtolower($page)=='pelatihan'?'active':'') ?>">
         <a href="<?php echo base_url('Pelatihan'); ?>">
@@ -53,7 +71,7 @@
 
 
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-            <a href="<?php echo base_url('Posisi'); ?>">
+            <a href="<?php echo base_url('Topik'); ?>">
               <i class="fa fa-list-ul"></i>
               <span>Daftar Topik</span>
             </a>
@@ -77,14 +95,14 @@
 
         <ul class="treeview-menu">
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-            <a href="<?php echo base_url('Posisi'); ?>">
+            <a href="<?php echo base_url('Pemateri'); ?>">
               <i class="fa fa-list-ul"></i>
               <span>Daftar Pemateri</span>
             </a>
           </li>
 
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-            <a href="<?php echo base_url('Posisi'); ?>">
+            <a href="<?php echo base_url('Pemateri/tambahJadwal'); ?>">
               <i class="fa fa-plus-circle"></i>
               <span>Tambah Jadwal Pemateri</span>
             </a>
@@ -102,14 +120,14 @@
 
         <ul class="treeview-menu">
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-            <a href="<?php echo base_url('Posisi'); ?>">
+            <a href="<?php echo base_url('Aktivitas'); ?>">
               <i class="fa fa-check-circle"></i>
               <span>Aktivitas Hari Ini</span>
             </a>
           </li>
 
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-            <a href="<?php echo base_url('Posisi'); ?>">
+            <a href="<?php echo base_url('AKtivitas/aktivitasDaftar'); ?>">
               <i class="fa fa-list-alt"></i>
               <span>Daftar Aktivitas</span>
             </a>

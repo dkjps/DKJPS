@@ -16,12 +16,12 @@ class Pemateri extends AUTH_Controller {
 		$data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "Pelatihan";
-		$data['judul'] = "Daftar Pelatihan";
+		$data['judul'] = "Daftar Pemateri";
 		$data['deskripsi'] = "Daftar pelatihan TerasAsuh";
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
 
-		$this->template->views('pelatihan/home', $data);
+		$this->template->views('pemateri/home_pemateri', $data);
 	}
 
 	public function tambahPemateri(){
@@ -31,11 +31,25 @@ class Pemateri extends AUTH_Controller {
 		$data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "tambahPelatihan";
-		$data['judul'] = "Tambah Data Pelatihan";
+		$data['judul'] = "Tambah Data Pemateri";
 		$data['deskripsi'] = "Tambah data pelatihan TerasAsuh sesuai kebutuhan";
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
 		$this->template->views('pemateri/pemateri_add');
+	}
+
+	public function tambahJadwal(){
+        $data['userdata'] = $this->userdata;
+		$data['dataPegawai'] = $this->M_pegawai->select_all();
+		$data['dataPosisi'] = $this->M_posisi->select_all();
+		$data['dataKota'] = $this->M_kota->select_all();
+
+		$data['page'] = "tambahPelatihan";
+		$data['judul'] = "Tambah Jadwal Pemateri Pelatihan";
+		$data['deskripsi'] = "Tambah data pelatihan TerasAsuh sesuai kebutuhan";
+
+		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
+		$this->template->views('pemateri/pemateri_addJadwal');
 	}
 
 	// public function tampil() {

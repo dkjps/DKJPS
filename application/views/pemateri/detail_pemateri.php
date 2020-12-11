@@ -3,45 +3,84 @@
 </div>
 
 <div class="box">
-  <div class="box-header">
-    <div class="col-md-6" style="padding: 0;">
-        <a href="<?php echo base_url('tambahData/addPelatihan'); ?>" class="btn btn-primary btn-block btn-flat" role="button" aria-pressed="true"><span>Tambah Pelatihan</span></a>
-    </div>
-    <div class="col-md-3">
-        <a href="<?php echo base_url('Pegawai/export'); ?>" class="form-control btn btn-default"><i class="glyphicon glyphicon glyphicon-floppy-save"></i> Export Data Excel</a>
-    </div>
-    <div class="col-md-3">
-        <button class="form-control btn btn-default" data-toggle="modal" data-target="#import-pegawai"><i class="glyphicon glyphicon glyphicon-floppy-open"></i> Import Data Excel</button>
-    </div>
-  </div>
-  <!-- /.box-header -->
   <div class="box-body">
-  <div class="table-responsive">
-  <table id="list-data" class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Nama Pelatihan</th>
-          <th>Deskripsi Pelatihan</th>
-          <th>Jumlah Kelas</th>
-          <th>Jumlah Pemateri</th>
-          <th>Status</th>
-          <th style="text-align: center;">Aksi</th>
-        </tr>
-      </thead>
-      <tbody id="data-pegawai">        
-      </tbody>
-    </table>
-  </div>
+    
+  <form class="form-horizontal">
+
+  <div class="form-group">
+    <label class="col-md-2 control-label" for="inputNamaPelatihan">Asal Provinsi</label>
+    <div class="col-md-8">
+      <select  class="form-control"></select>
+    </div>
+    </div>
+
+    <div class="form-group">
+    <label class="col-md-2 control-label" for="inputNamaPelatihan">Pilih Pemateri</label>
+    <div class="col-md-8">
+      <select  class="form-control" required></select>
+    </div>
+    </div>
+
+    <div class="form-group">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Detail Pemateri</div>
+        <div class="panel-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+            <label class="col-md-2 control-label" for="inputNamaPelatihan">Nama :</label>
+            <div class="col-md-10">
+             <input type="text" class="form-control" id="namaKelas" placeholder="Nama" readonly="readonly">
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="col-md-2 control-label" for="inputNamaPelatihan">Total Kelas :</label>
+            <div class="col-md-10">
+             <input type="text" class="form-control" id="namaKelas" placeholder="Total Kelas" readonly="readonly">
+            </div>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Table -->
+        <div class="table-responsive">
+        <table class="table">
+        <table id="list-data" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nama Kelas</th>
+              <th>Nama Topik</th>
+              <th>Jam Kelas</th>
+            </tr>
+          </thead>
+          <tbody id="jadwal-pemateri">
+          </tbody>
+        </table>
+        </table>
+        </div>
+   
+      </div> 
+
+    </div> 
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-12 text-center">
+      <a href="<?php echo base_url('Kelas/detailKelas'); ?>" class="btn btn-danger">Kembali</a>
+      <button type="button" class="btn btn-primary">Tambah Pemateri</button>
+      </div>
+    </div>
+
+</form>
+
   </div>
 </div>
 
-<?php echo $modal_tambah_pegawai; ?>
-
-<div id="tempat-modal"></div>
-
-<?php show_my_confirm('konfirmasiHapus', 'hapus-dataPegawai', 'Hapus Data Ini?', 'Ya, Hapus Data Ini'); ?>
 <?php
-  $data['judul'] = 'Pegawai';
-  $data['url'] = 'Pegawai/import';
-  echo show_my_modal('modals/modal_import', 'import-pegawai', $data);
+  $data['judul'] = 'TambahPelatihan';
+  $data['url'] = 'Pelatihan/addPelatihan';
 ?>

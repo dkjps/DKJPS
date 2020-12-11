@@ -21,7 +21,7 @@ class Topik extends AUTH_Controller {
 
 		$data['modal_tambah_pegawai'] = show_my_modal('modals/modal_tambah_pegawai', 'tambah-pegawai', $data);
 
-		$this->template->views('pelatihan/home', $data);
+		$this->template->views('topik/home_topik', $data);
 	}
 
 	public function tambahTopik(){
