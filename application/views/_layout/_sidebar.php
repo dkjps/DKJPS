@@ -145,14 +145,14 @@
 
         <ul class="treeview-menu">
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-            <a href="<?php echo base_url('Posisi'); ?>">
+            <a href="<?php echo base_url('Akun'); ?>">
               <i class="fa fa-cogs"></i>
               <span>Pengaturan Akun</span>
             </a>
           </li>
 
           <li <?php if ($page == 'posisi') {echo 'class="active"';} ?>>
-            <a href="<?php echo base_url('Posisi'); ?>">
+            <a href="<?php echo base_url(''); ?>">
               <i class="fa fa-sign-out"></i>
               <span>Keluar</span>
             </a>

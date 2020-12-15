@@ -96,8 +96,8 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
-// $active_group = 'mhsc_transactional';
-// $query_builder = TRUE;
+	// $active_group = 'mhsc_transactional';
+	// $query_builder = TRUE;
 
 $db['mhsc_masterdata'] = array(
 	'dsn'	=> '',
