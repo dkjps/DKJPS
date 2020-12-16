@@ -20,10 +20,10 @@ class Materi extends AUTH_Controller {
 	}
 
 	public function tambahMateri(){
-        $data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
+        // $data['userdata'] = $this->userdata;
+		// $data['dataPegawai'] = $this->M_pegawai->select_all();
+		// $data['dataPosisi'] = $this->M_posisi->select_all();
+		// $data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "tambahPelatihan";
 		$data['judul'] = "Tambah Data Pelatihan";

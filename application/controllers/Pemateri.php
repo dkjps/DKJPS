@@ -10,10 +10,10 @@ class Pemateri extends AUTH_Controller {
 	}
 
 	public function index() {
-		$data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
+		// $data['userdata'] = $this->userdata;
+		// $data['dataPegawai'] = $this->M_pegawai->select_all();
+		// $data['dataPosisi'] = $this->M_posisi->select_all();
+		// $data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "Pelatihan";
 		$data['judul'] = "Daftar Pemateri";
@@ -25,10 +25,10 @@ class Pemateri extends AUTH_Controller {
 	}
 
 	public function tambahPemateri(){
-        $data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
+        // $data['userdata'] = $this->userdata;
+		// $data['dataPegawai'] = $this->M_pegawai->select_all();
+		// $data['dataPosisi'] = $this->M_posisi->select_all();
+		// $data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "tambahPelatihan";
 		$data['judul'] = "Tambah Data Pemateri";
@@ -39,10 +39,10 @@ class Pemateri extends AUTH_Controller {
 	}
 
 	public function tambahJadwal(){
-        $data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
+        // $data['userdata'] = $this->userdata;
+		// $data['dataPegawai'] = $this->M_pegawai->select_all();
+		// $data['dataPosisi'] = $this->M_posisi->select_all();
+		// $data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "tambahPelatihan";
 		$data['judul'] = "Tambah Jadwal Pemateri Pelatihan";

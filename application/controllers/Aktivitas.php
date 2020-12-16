@@ -10,10 +10,10 @@ class Aktivitas extends AUTH_Controller {
 	}
 
 	public function index() {
-		$data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
+		// $data['userdata'] = $this->userdata;
+		// $data['dataPegawai'] = $this->M_pegawai->select_all();
+		// $data['dataPosisi'] = $this->M_posisi->select_all();
+		// $data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "Pelatihan";
 		$data['judul'] = "Aktivitas Hari Ini";
@@ -25,10 +25,10 @@ class Aktivitas extends AUTH_Controller {
 	}
 
 	public function aktivitasDaftar() {
-		$data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
+		// $data['userdata'] = $this->userdata;
+		// $data['dataPegawai'] = $this->M_pegawai->select_all();
+		// $data['dataPosisi'] = $this->M_posisi->select_all();
+		// $data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "Pelatihan";
 		$data['judul'] = "Daftar Aktivitas Anda";
@@ -40,10 +40,10 @@ class Aktivitas extends AUTH_Controller {
 	}
 
 	public function tambahAktivitas(){
-        $data['userdata'] = $this->userdata;
-		$data['dataPegawai'] = $this->M_pegawai->select_all();
-		$data['dataPosisi'] = $this->M_posisi->select_all();
-		$data['dataKota'] = $this->M_kota->select_all();
+        // $data['userdata'] = $this->userdata;
+		// $data['dataPegawai'] = $this->M_pegawai->select_all();
+		// $data['dataPosisi'] = $this->M_posisi->select_all();
+		// $data['dataKota'] = $this->M_kota->select_all();
 
 		$data['page'] = "tambahPelatihan";
 		$data['judul'] = "Tambah Aktivitas";

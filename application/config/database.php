@@ -71,8 +71,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 
-$active_group = 'default';
-$query_builder = TRUE;
+// $active_group = 'default';
+// $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
@@ -96,8 +96,8 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
-	// $active_group = 'mhsc_transactional';
-	// $query_builder = TRUE;
+	$active_group = 'mhsc_transactional';
+	$query_builder = TRUE;
 
 $db['mhsc_masterdata'] = array(
 	'dsn'	=> '',
